@@ -18,8 +18,7 @@
 
             <div class="col-12">
               <label for="nom" class="form-label">First Name</label>
-              <?php echo $form->label("nom", "First Name", "form-label");?>
-              <?php echo $form-> input("nom", "text", "form-control", "required");?>
+              <input type="text" class="form-control" id="nom" name="nom" required >
               <small></small>
             </div>
 

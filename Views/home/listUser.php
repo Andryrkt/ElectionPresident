@@ -13,10 +13,8 @@
         <span class="fs-4">Base de donnée</span>
       </a>
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="listUser.php" class="nav-link active" aria-current="page">Liste</a></li>
-        <?php if(isset($_SESSION['auth'])):?>
-            <li class="nav-item"><a href="/andranapoo/public/logout" class="nav-link">déconnexion</a></li>
-        <?php endif;?>
+        <li class="nav-item"><a href="/andranapoo/public/logout" class="nav-link active" aria-current="page">déconnexion</a></li>
+        <li class="nav-item"><a href="/andranapoo/public/logout" class="nav-link">déconnexion</a></li>
       </ul>
     </header>
 </div>

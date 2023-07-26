@@ -11,9 +11,15 @@ class HomeController extends Controller
     public function index(): Renderer
     {
        
-        $userModel = new User();
-        $users = $userModel->all();
-        return Renderer::make('home/listUser', compact('users'));
+        if ($this->isLogged())
+        {
+            $userModel = new User();
+            $users = $userModel->all();
+            return Renderer::make('home/listUser', compact('users'));
+        } else {
+            return Renderer::make('home/index', []);
+        }
+       
         
     }
 
