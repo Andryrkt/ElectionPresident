@@ -14,8 +14,8 @@ $router = new Router();
 //User
 $router->get('/andranapoo/public/listUser', ['Controllers\HomeController', 'index']);
 
-$router->get('/andranapoo/public/addUser', ['Controllers\addUserController', 'formulaireUser']);
-$router->post('/andranapoo/public/addUser', ['Controllers\addUserController', 'addUser']);
+$router->get('/andranapoo/public/addUser', ['Controllers\UserController', 'formulaireUser']);
+$router->post('/andranapoo/public/addUser', ['Controllers\UserController', 'addUser']);
 $router->get('/andranapoo/public/deleteUser', ['Controllers\HomeController', 'destroy']);
 $router->get('/andranapoo/public/editUser', ['Controllers\HomeController', 'edit']);
 $router->post('/andranapoo/public/editUser', ['Controllers\HomeController', 'update']);
