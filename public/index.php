@@ -14,24 +14,24 @@ $router = new Router();
 //User
 $router->get('/andranapoo/public/listUser', ['Controllers\HomeController', 'index']);
 
-$router->get('/andranapoo/public/addUser', ['Controllers\UserController', 'formulaireUser']);
-$router->post('/andranapoo/public/addUser', ['Controllers\UserController', 'addUser']);
+$router->get('/andranapoo/public/addUser', ['Controllers\UserController', 'formulaire']);
+$router->post('/andranapoo/public/addUser', ['Controllers\UserController', 'add']);
 $router->get('/andranapoo/public/deleteUser', ['Controllers\HomeController', 'destroy']);
 $router->get('/andranapoo/public/editUser', ['Controllers\HomeController', 'edit']);
 $router->post('/andranapoo/public/editUser', ['Controllers\HomeController', 'update']);
 
 //Groupe
-$router->get('/andranapoo/public/addGroupe', ['Controllers\GroupeController', 'formulaireGroupe']);
-$router->post('/andranapoo/public/addGroupe', ['Controllers\GroupeController', 'addGroupe']);
+$router->get('/andranapoo/public/addGroupe', ['Controllers\GroupeController', 'formulaire']);
+$router->post('/andranapoo/public/addGroupe', ['Controllers\GroupeController', 'add']);
 
 //Role
-$router->get('/andranapoo/public/addRole', ['Controllers\RoleController', 'formulaireRole']);
-$router->post('/andranapoo/public/addRole', ['Controllers\RoleController', 'addRole']);
+$router->get('/andranapoo/public/addRole', ['Controllers\RoleController', 'formulaire']);
+$router->post('/andranapoo/public/addRole', ['Controllers\RoleController', 'add']);
 
 //Candidat
-$router->get('/andranapoo/public/addCandidat', ['Controllers\CandidatController', 'formulaireCandidat']);
-$router->post('/andranapoo/public/addCandidat', ['Controllers\CandidatController', 'addCandidat']);
-$router->get('/andranapoo/public/listCandidat', ['Controllers\CandidatController', 'listCandidat']);
+$router->get('/andranapoo/public/addCandidat', ['Controllers\CandidatController', 'formulaire']);
+$router->post('/andranapoo/public/addCandidat', ['Controllers\CandidatController', 'add']);
+$router->get('/andranapoo/public/listCandidat', ['Controllers\CandidatController', 'list']);
 $router->get('/andranapoo/public/deleteCandidat', ['Controllers\CandidatController', 'destroy']);
 $router->get('/andranapoo/public/editCandidat', ['Controllers\CandidatController', 'edit']);
 $router->post('/andranapoo/public/editCandidat', ['Controllers\CandidatController', 'update']);

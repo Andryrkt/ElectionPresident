@@ -6,20 +6,19 @@ use Models\User;
 use Source\Renderer;
 
 
-class addUserController
+class UserController
 {
 
-    public function formulaireUser(): Renderer
+    public function formulaire(): Renderer
     {       
         return Renderer::make('home/formulaireUser', []);
     }
 
-    public function addUser()
+    public function add()
     {
         $userModel = new User();
         $userModel->insertData($_POST);
-        return header('Location:/andranapoo/public/');
-        
+        return header('Location:/andranapoo/public/');    
     }
 
 }

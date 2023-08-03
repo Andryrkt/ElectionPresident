@@ -9,12 +9,12 @@ use Source\Renderer;
 class CandidatController
 {
 
-    public function formulaireCandidat(): Renderer
+    public function formulaire(): Renderer
     {       
         return Renderer::make('home/formulaireCandidat', []);
     }
 
-    public function addCandidat()
+    public function add()
     {
         $CandidatModel = new Candidat();
         $CandidatModel->insertData($_POST);
@@ -22,7 +22,7 @@ class CandidatController
     }
 
 
-    public function listCandidat(): Renderer
+    public function list(): Renderer
     {
         $CandidatModel = new Candidat();
         $candidats = $CandidatModel->all();

@@ -9,12 +9,12 @@ use Source\Renderer;
 class GroupeController
 {
 
-    public function formulaireGroupe(): Renderer
+    public function formulaire(): Renderer
     {       
         return Renderer::make('home/formulaireGroupe', []);
     }
 
-    public function addGroupe()
+    public function add()
     {
         $userModel = new Groupe();
         $userModel->insertData($_POST);

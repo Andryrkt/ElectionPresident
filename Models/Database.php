@@ -9,9 +9,9 @@ use Source\Constant;
 class Database
 {
     protected static PDO $pdo;
-    protected string $table;
+   
 
-    public function __construct()
+    private function __construct()
     {
         try {
             static::$pdo = new PDO('mysql:host='.Constant::DB_HOST.';dbname='.Constant::DB_NAME,
@@ -25,7 +25,6 @@ class Database
             echo $e->getMessage(); die();
         }
 
-        $this->table = strtolower(explode('\\', get_class($this))[1]) . 's';
     }
 
     protected function getPDO(): PDO

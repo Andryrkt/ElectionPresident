@@ -9,12 +9,12 @@ use Source\Renderer;
 class RoleController
 {
 
-    public function formulaireRole(): Renderer
+    public function formulaire(): Renderer
     {       
         return Renderer::make('home/formulaireRole', []);
     }
 
-    public function addRole()
+    public function add()
     {
         $userModel = new Role();
         $userModel->insertData($_POST);
